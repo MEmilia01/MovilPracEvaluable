@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "name": "Kitty",
+    "maps": [
+        {
+            "name": "Jugador",
+            "id": "1d636040-d193-4ee6-9f74-45ac248a5ca9",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "84faa80c-5483-42e8-922a-35cec0535890",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f06dcf18-9fd9-4d56-9b60-876ec6b644fd",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
