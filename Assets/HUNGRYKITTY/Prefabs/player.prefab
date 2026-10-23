@@ -304,8 +304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f92343ed12f744db5bc7fba4a915d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMov
-  camara: {fileID: 0}
-  suavizado: 15
+  mainCamera: {fileID: 0}
+  moveAction: {fileID: 3173666693990613121, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
+  moveSpeed: 5
+  stopDistance: 0.05
 --- !u!1 &8724822106611192445
 GameObject:
   m_ObjectHideFlags: 0

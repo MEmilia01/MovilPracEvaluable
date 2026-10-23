@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        puntosholder = GetComponentInChildren<Puntuacion>();
+        spaunerenemigos = GetComponentInChildren<SpawnEne>();
     }
 
     

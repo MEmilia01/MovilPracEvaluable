@@ -3,35 +3,44 @@ using UnityEngine.InputSystem;
 
 public class PlayerMov : MonoBehaviour
 {
-    [SerializeField] private Camera camara;
-    [SerializeField] private float suavizado = 15f;
+    [SerializeField] private InputActionAsset inputActions; // arrastra aquí tu asset de Input Actions
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float stopDistance = 0.1f;
 
-    private Vector3 posicionObjetivo;
+    private InputAction moveAction;
+    private Rigidbody2D rb;
+    private Camera cam;
 
-    private void Start()
+    private void Awake()
     {
-        // Si no asignas una cámara en el Inspector, usa la principal
-        if (camara == null)
-            camara = Camera.main;
+        rb = GetComponent<Rigidbody2D>();
+        cam = Camera.main;
+
+        // Action map "Jugador", acción "Move"
+        moveAction = inputActions.FindActionMap("Jugador", true).FindAction("Move", true);
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        // Posición del ratón en píxeles
-        Vector3 posicionRaton = Input.mousePosition;
+        if (moveAction != null) moveAction.Enable();
+    }
 
-        // Convierte píxeles de pantalla a coordenadas del mundo
-        posicionObjetivo = camara.ScreenToWorldPoint(posicionRaton);
+    private void OnDisable()
+    {
+        if (moveAction != null) moveAction.Disable();
+    }
 
-        // En 2D mantenemos Z en 0 para que el sprite no desaparezca
-        posicionObjetivo.z = 0f;
+    private void FixedUpdate()
+    {
+        Vector2 screenPos = moveAction.ReadValue<Vector2>();
+        Vector2 worldPos = cam.ScreenToWorldPoint(screenPos);
 
-        // Movimiento suave, sin Rigidbody
-        transform.position = Vector3.Lerp(
-            transform.position,
-            posicionObjetivo,
-            suavizado * Time.deltaTime
-        );
+        Vector2 toMouse = worldPos - rb.position;
+
+        if (toMouse.magnitude > stopDistance)
+            rb.linearVelocity = toMouse.normalized * speed;
+        else
+            rb.linearVelocity = Vector2.zero;
     }
 
 }
