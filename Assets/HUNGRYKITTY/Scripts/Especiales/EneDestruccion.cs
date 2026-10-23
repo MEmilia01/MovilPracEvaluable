@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class EneDestruccion : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public bool bomba;
+    [SerializeField] Puntuacion holderpuntuacion;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        int sum = 1;
+        int rest = -1;
+
+        if (collision.tag == "Player")
+        {
+            if (!bomba) { holderpuntuacion.SetPuntos = holderpuntuacion.GetPuntos + sum; }
+            else { holderpuntuacion.SetPuntos = holderpuntuacion.GetPuntos + rest; }
+        }
     }
 }

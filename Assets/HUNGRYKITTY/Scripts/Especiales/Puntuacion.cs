@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class Puntuacion : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private int puntos = 0;
+    //public int meta = 20;
 
-    // Update is called once per frame
-    void Update()
+    public int GetPuntos { get => puntos; }
+    public int SetPuntos { set => puntos = value; }
+
+    private void Start()
     {
         
     }
