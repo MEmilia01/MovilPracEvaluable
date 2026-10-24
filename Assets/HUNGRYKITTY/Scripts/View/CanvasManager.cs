@@ -84,6 +84,8 @@ public class CanvasManager : MonoBehaviour
         menuvictoria.SetActive(false);
         menudatos.SetActive(true);
 
+#if UNITY_EDITOR
         version.text = " Version del proyecto:  " + PlayerSettings.bundleVersion;
+#endif
     }
 }
