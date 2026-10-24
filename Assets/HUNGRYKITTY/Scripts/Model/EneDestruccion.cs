@@ -2,18 +2,21 @@ using UnityEngine;
 
 public class EneDestruccion : MonoBehaviour
 {
-    public bool bomba;
     [SerializeField] Puntuacion holderpuntuacion;
+    private void Start()
+    {
+        holderpuntuacion = GetComponentInParent<Puntuacion>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         int sum = 1;
-        int rest = -1;
 
         if (collision.tag == "Player")
         {
-            if (!bomba) { holderpuntuacion.SetPuntos = holderpuntuacion.GetPuntos + sum; }
-            else { holderpuntuacion.SetPuntos = holderpuntuacion.GetPuntos + rest; }
+            Debug.Log("Entra al toque");
+            holderpuntuacion.SetPuntos = holderpuntuacion.GetPuntos + sum;
+            Destroy(this.gameObject);
         }
     }
 }
