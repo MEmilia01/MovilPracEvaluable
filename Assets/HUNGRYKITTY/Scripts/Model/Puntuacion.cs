@@ -8,8 +8,4 @@ public class Puntuacion : MonoBehaviour
     public int GetPuntos { get => puntos; }
     public int SetPuntos { set => puntos = value; }
 
-    private void Start()
-    {
-        
-    }
 }

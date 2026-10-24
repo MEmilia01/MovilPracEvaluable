@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMov : MonoBehaviour
 {
-    [SerializeField] private InputActionAsset mapainteraciones; // arrastra aquí tu asset de Input Actions
+    [SerializeField] private InputActionAsset mapainteraciones; 
     [SerializeField] private float movimiento = 5f;
     [SerializeField] private float espacio = 0.1f;
 

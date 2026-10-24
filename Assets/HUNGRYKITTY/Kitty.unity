@@ -119,6 +119,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &22779302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8077801720287629916, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+  m_PrefabInstance: {fileID: 274425403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &126342472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3778994428546959155, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+  m_PrefabInstance: {fileID: 274425403}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &157841951
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +229,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1754303778393911123, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097784160107942112, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: mentexto
+      value: 
+      objectReference: {fileID: 126342472}
+    - target: {fileID: 2097784160107942112, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: menudatos
+      value: 
+      objectReference: {fileID: 22779302}
     - target: {fileID: 3653087270556764992, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -293,9 +321,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3871990474014045346, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871990474014045346, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871990474014045346, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871990474014045346, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5292448080925248470, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423066008127093599, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573840368158525747, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077801720287629916, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8463811827291713102, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_text
+      value: Reinicio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -341,7 +401,7 @@ MonoBehaviour:
   m_MoveAction: {fileID: 3173666693990613121, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
   m_SubmitAction: {fileID: -5120972386423967649, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
   m_CancelAction: {fileID: 0}
-  m_LeftClickAction: {fileID: 0}
+  m_LeftClickAction: {fileID: -5120972386423967649, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
   m_ScrollWheelAction: {fileID: 0}
@@ -787,6 +847,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2029063716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2097784160107942112, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+  m_PrefabInstance: {fileID: 274425403}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ba9a6d7cc37545a47cf678100506b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanvasManager
 --- !u!114 &2049688273 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1286327559754556237, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
@@ -832,6 +903,14 @@ PrefabInstance:
     - target: {fileID: 1286327559754556237, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
       propertyPath: minRange.y
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824286732885224310, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2029063716}
+    - target: {fileID: 4824286732885224310, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
+      propertyPath: victoria
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4824286732885224310, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
       propertyPath: puntosholder
@@ -916,11 +995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6679654804314191655, guid: 48713eca89a67c44696281dc1777ac5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.89
+      value: -8.05
       objectReference: {fileID: 0}
     - target: {fileID: 6679654804314191655, guid: 48713eca89a67c44696281dc1777ac5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.14
+      value: -3.12
       objectReference: {fileID: 0}
     - target: {fileID: 6679654804314191655, guid: 48713eca89a67c44696281dc1777ac5b, type: 3}
       propertyPath: m_LocalPosition.z
