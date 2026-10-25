@@ -6,12 +6,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] SpawnEne spaunerenemigos;
     [SerializeField] CanvasManager canvas;
 
-    public int victoria;
+    public int victoria = 20;
 
     void Start()
     {
         puntosholder = GetComponentInChildren<Puntuacion>();
         spaunerenemigos = GetComponentInChildren<SpawnEne>();
+
+        spaunerenemigos.numvictoria = victoria;
     }
 
     public void ActualizarPuntuacion()

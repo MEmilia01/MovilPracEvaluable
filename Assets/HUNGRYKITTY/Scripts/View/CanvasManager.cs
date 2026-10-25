@@ -34,22 +34,13 @@ public class CanvasManager : MonoBehaviour
             Debug.Log("este es el boton que esta siendo obtenido: " + boton);
         }
     }
-    private void OnApplicationPause(bool pausada)
-    {
-        aplicacionEnSegundoPlano = pausada;
 
-        if (pausada)
-        {
-            AbrirMensaje();
-        }
-        else { return; }
-    }
     public void ActualiMensaje()
     {
         if (aplicacionEnSegundoPlano) { mentexto.text = "   Has dejado la aplicacion en segundo plano, por favor vuelve TnT"; }
         else { mentexto.text = "   Holi"; return; }
     }
-    public void Reinicio() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); AbrirHub(); }
+    public void Reinicio() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
     public void Salir() { Application.Quit(); }
 
 
@@ -109,4 +100,32 @@ public class CanvasManager : MonoBehaviour
         version.text = " Version del proyecto:  " + PlayerSettings.bundleVersion;
 #endif
     }
+
+//interfaz
+#if UNITY_STANDALONE
+    private void OnApplicationFocus(bool tieneFoco)
+    {
+        if (!tieneFoco)
+        {
+            aplicacionEnSegundoPlano = true;
+            AbrirMensaje();
+        }
+        else
+        {
+            aplicacionEnSegundoPlano = false;
+        }
+    }
+#endif
+#if UNITY_ANDROID
+    private void OnApplicationPause(bool pausada)
+    {
+        aplicacionEnSegundoPlano = pausada;
+
+        if (pausada)
+        {
+            AbrirMensaje();
+        }
+        else { return; }
+    }
+#endif
 }

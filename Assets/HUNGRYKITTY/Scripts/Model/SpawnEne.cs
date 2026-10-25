@@ -11,22 +11,30 @@ public class SpawnEne : MonoBehaviour
     [SerializeField] Vector2 maxRange = new Vector2(5f, 3f);
 
     public List<GameObject> comidas = new List<GameObject>();
+    public int numvictoria;
+    Camera cam;
 
 
     void Start()
     {
+        cam = Camera.main;
 
         contenedorComidas = GetComponent<Transform>();
-        StartCoroutine(Aparicioncom(20));
+        StartCoroutine(Aparicioncom(numvictoria));
     }
     
     IEnumerator Aparicioncom(int cantidad)
     {
+        //Debug.LogError("estos son los puntos necesarios " + cantidad);
+
         for (int i = 0; i < cantidad; i++)
         {
+            float mitadAlto = cam.orthographicSize;
+            float mitadAncho = mitadAlto * cam.aspect;
+
             Vector2 posicion = new Vector2(
-                Random.Range(minRange.x, maxRange.x),
-                Random.Range(minRange.y, maxRange.y)
+                Random.Range(minRange.x, maxRange.x) * mitadAncho,
+                Random.Range(minRange.y, maxRange.y) * mitadAlto
             );
             
             yield return new WaitForSeconds(4f);

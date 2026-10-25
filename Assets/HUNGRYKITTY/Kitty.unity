@@ -409,7 +409,7 @@ MonoBehaviour:
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
-  m_PointAction: {fileID: 0}
+  m_PointAction: {fileID: 3173666693990613121, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
   m_MoveAction: {fileID: 0}
   m_SubmitAction: {fileID: -5120972386423967649, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
   m_CancelAction: {fileID: 0}
@@ -916,13 +916,17 @@ PrefabInstance:
       propertyPath: minRange.y
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 1286327559754556237, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
+      propertyPath: numvictoria
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4824286732885224310, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2029063716}
     - target: {fileID: 4824286732885224310, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
       propertyPath: victoria
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4824286732885224310, guid: 2e7e0619f776c0e419587155a9da80e8, type: 3}
       propertyPath: puntosholder
