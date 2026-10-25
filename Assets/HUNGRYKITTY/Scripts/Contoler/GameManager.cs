@@ -7,11 +7,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] CanvasManager canvas;
 
     public int victoria;
-    public float tiempo;
 
     void Start()
     {
-        tiempo = Time.timeScale;
         puntosholder = GetComponentInChildren<Puntuacion>();
         spaunerenemigos = GetComponentInChildren<SpawnEne>();
     }
@@ -25,7 +23,5 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         ActualizarPuntuacion();
-        Debug.Log("ESTE ES EL TIEMPO DEL JUEGO: " + tiempo);
-
     }
 }

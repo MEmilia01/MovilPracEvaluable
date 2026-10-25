@@ -17,11 +17,12 @@ public class CanvasManager : MonoBehaviour
     public TextMeshProUGUI version;
 
     [SerializeField] GameObject btoncont;
+    public bool enhub;
 
     void Start()
     {
-        //Time.timeScale = 0f;
-        //AbrirDatos();
+        enhub = false;
+        AbrirPausa();
     }
 
     private void SeleccionarBoton(GameObject boton)
@@ -39,13 +40,13 @@ public class CanvasManager : MonoBehaviour
 
     public void AbrirHub()
     {
-        Time.timeScale = 1.0f;
-
         menuhub.SetActive(true);
         menupausa.SetActive(false);
         menumensaje.SetActive(false);
         menuvictoria.SetActive(false);
         menudatos.SetActive(false);
+
+        Time.timeScale = 1f;
     }
     public void AbrirPausa()
     {
@@ -65,6 +66,8 @@ public class CanvasManager : MonoBehaviour
         menumensaje.SetActive(true);
         menuvictoria.SetActive(false);
         menudatos.SetActive(false);
+
+        Time.timeScale = 0f;
     }
     public void AbrirVitoria()
     {

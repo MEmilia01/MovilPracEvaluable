@@ -337,6 +337,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5145314440790348830, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145314440790348830, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145314440790348830, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 5292448080925248470, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
@@ -355,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8463811827291713102, guid: 694ba2132d477b84ca48cf09e8ee405a, type: 3}
       propertyPath: m_text
-      value: Reinicio
+      value: Continuar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -398,7 +410,7 @@ MonoBehaviour:
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
   m_PointAction: {fileID: 0}
-  m_MoveAction: {fileID: 3173666693990613121, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
+  m_MoveAction: {fileID: 0}
   m_SubmitAction: {fileID: -5120972386423967649, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
   m_CancelAction: {fileID: 0}
   m_LeftClickAction: {fileID: -5120972386423967649, guid: 34cfbfec7ddd04b4d8f099c4217894cc, type: 3}
