@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EneDestruccion : MonoBehaviour
 {
+    [Header("Forma de ganar puntuacion")]
     [SerializeField] Puntuacion holderpuntuacion;
     private void Start()
     {

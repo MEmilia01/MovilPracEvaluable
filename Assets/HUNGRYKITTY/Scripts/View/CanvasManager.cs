@@ -6,16 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
+    [Header("Menus necesarios")]
     [SerializeField] GameObject menuhub;
     [SerializeField] GameObject menupausa;
     [SerializeField] GameObject menumensaje;
     [SerializeField] GameObject menuvictoria;
     [SerializeField] GameObject menudatos;
 
+    [Header("Extras de texto o gameobjects")]
     public TextMeshProUGUI puntostexto;
     public TextMeshProUGUI mentexto;
     public TextMeshProUGUI version;
-
+    public TextMeshProUGUI meta;
     [SerializeField] GameObject btoncont;
     private bool aplicacionEnSegundoPlano;
 
@@ -96,6 +98,8 @@ public class CanvasManager : MonoBehaviour
         menuvictoria.SetActive(false);
         menudatos.SetActive(true);
 
+        version.text = " Version del proyecto:  2.50";
+
 #if UNITY_EDITOR
         version.text = " Version del proyecto:  " + PlayerSettings.bundleVersion;
 #endif
@@ -115,8 +119,7 @@ public class CanvasManager : MonoBehaviour
             aplicacionEnSegundoPlano = false;
         }
     }
-#endif
-#if UNITY_ANDROID
+#elif UNITY_ANDROID
     private void OnApplicationPause(bool pausada)
     {
         aplicacionEnSegundoPlano = pausada;

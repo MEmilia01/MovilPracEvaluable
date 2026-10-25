@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Scripts necesarios")]
     [SerializeField] Puntuacion puntosholder;
     [SerializeField] SpawnEne spaunerenemigos;
     [SerializeField] CanvasManager canvas;
 
+    [Header("Meta")]
     public int victoria = 20;
 
     void Start()
@@ -13,7 +15,8 @@ public class GameManager : MonoBehaviour
         puntosholder = GetComponentInChildren<Puntuacion>();
         spaunerenemigos = GetComponentInChildren<SpawnEne>();
 
-        spaunerenemigos.numvictoria = victoria;
+        victoria = spaunerenemigos.numvictoria;
+        canvas.meta.text = "Tu meta es " + victoria;
     }
 
     public void ActualizarPuntuacion()

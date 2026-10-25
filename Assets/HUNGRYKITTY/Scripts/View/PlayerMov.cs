@@ -3,10 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerMov : MonoBehaviour
 {
+    [Header("Datos base del jugador")]
     [SerializeField] private InputActionAsset mapainteraciones; 
     [SerializeField] private float movimiento = 5f;
     [SerializeField] private float espacio = 0.1f;
 
+    [Header("Componentes extras")]
     private InputAction accion;
     private Rigidbody2D rb;
     private Camera cam;
